@@ -9,6 +9,7 @@ class PaymentSession extends SSLCommerz {
     }
 
     setSSLdata() {
+        this.setSSLdata();
         this.postData['store_id'] = this.store_id;
         this.postData['store_passwd'] = this.store_pass;
     }
@@ -65,17 +66,21 @@ class PaymentSession extends SSLCommerz {
     }
 
     async paymentInit() {
-        const response = await fetch('https://sandbox.sslcommerz.com/gwprocess/v4/api.php', {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, cors, *same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'same-origin', // include, *same-origin, omit
-            redirect: 'follow', // manual, *follow, error
-            referrer: 'no-referrer', // no-referrer, *client
-            body: getFormData(this.postData), // body data type must match "Content-Type" header
-        })
-        const data = await response.json();
-        return data;
+        try {
+            const response = await fetch(this.session_api, {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors', // no-cors, cors, *same-origin
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: 'same-origin', // include, *same-origin, omit
+                redirect: 'follow', // manual, *follow, error
+                referrer: 'no-referrer', // no-referrer, *client
+                body: getFormData(this.postData), // body data type must match "Content-Type" header
+            })
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            return error;
+        }
     }
 }
 
