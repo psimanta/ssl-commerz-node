@@ -12,6 +12,10 @@
   },
   "author": "Simanta Paul simanta.paul.26@gmail.com",
   "license": "ISC",
+  "keywords": [
+    "nodejs",
+    "sslcommerz"
+  ],
   "dependencies": {
     "form-data": "^4.0.0",
     "node-fetch": "^2.6.1"
