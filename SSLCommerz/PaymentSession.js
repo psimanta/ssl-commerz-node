@@ -9,12 +9,12 @@ class PaymentSession extends SSLCommerz {
     }
 
     setSSLdata() {
-        this.setSSLdata();
         this.postData['store_id'] = this.store_id;
         this.postData['store_passwd'] = this.store_pass;
     }
 
     setUrls({ success, fail, cancel, ipn }) {
+        this.setSSLdata();
         this.postData['success_url'] = success;
         this.postData['fail_url'] = fail;
         this.postData['cancel_url'] = cancel;
