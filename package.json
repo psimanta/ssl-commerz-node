@@ -1,0 +1,19 @@
+{
+  "name": "ssl-commerz-node",
+  "version": "1.0.0",
+  "description": "Module to implement sslcommerz payment gateway to NodeJs based app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Simanta Paul simanta.paul.26@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "form-data": "^4.0.0",
+    "node-fetch": "^2.6.1"
+  }
+}
