@@ -9,7 +9,7 @@ npm i ssl-commerz-node
 
 ## Set the parameters to make a request
 ```js
-const SSLCommerz = require('ssl-commerze-node');
+const SSLCommerz = require('ssl-commerz-node');
 const PaymentSession = SSLCommerz.PaymentSession;
 // For live payment set first parameter `false` and for sandbox set it `true`
 const payment = new PaymentSession(true, YOUR_STORE_ID, STORE_STORE_PASS)
