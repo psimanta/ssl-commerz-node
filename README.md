@@ -1,4 +1,4 @@
-# SSLCOMMERZ Payment Gateway integration in NodeJs
+# SSLCOMMERZ Payment Gateway integration in NodeJs (with MERN example)
 
 It is npm package which provides functionalities to implement SSLCommerz Payment Gateway in Node Based Apps.
 
